@@ -1,0 +1,42 @@
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    /* Stack the items vertically, with the image on top */
+    flex-direction: column-reverse;
+    align-items: center;
+    min-width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    border-radius: 0;
+  }
+  .container > * {
+    flex-grow: 1;
+  }
+
+  .text-side {
+    /* Use vw for padding to make it proportional to the screen width */
+    padding: 1vw;
+    justify-content: flex-start; /* Align content to the top */
+  }
+
+  h1 {
+    /* Font size scales with the screen width */
+    font-size: 10vw;
+  }
+
+  .img-side {
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    border-radius: 0 0 20px 20px;
+  }
+
+  .form {
+    margin-top: 2rem;
+  }
+
+  input,
+  button {
+    /* Use vw for padding inside the button and input */
+    padding: 4vw;
+  }
+}

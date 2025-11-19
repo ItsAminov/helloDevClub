@@ -1,0 +1,109 @@
+@media screen and (min-width: 800px) {
+  .container {
+    width: 850px;
+    height: 590px;
+    padding: 2em;
+  }
+  .img-side {
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+  }
+  button {
+    height: 25%;
+  }
+}
+@media screen and (max-width: 799px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 320px;
+    height: 110vh;
+    padding: 0.4em;
+    margin: 0;
+  }
+  .img-side {
+    max-height: 35%;
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+  }
+  button,
+  input {
+    height: 45%;
+  }
+}
+.img-side {
+  border-radius: 10px;
+}
+.container > * {
+  flex: 1;
+}
+.container {
+  margin-top: 1em;
+  justify-self: center;
+
+  background-color: white;
+
+  border-radius: 20px;
+  display: flex;
+}
+.text-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 4em 0.1em 1.5em 0.1em;
+  gap: 1em;
+  margin: 0.5em 1.5em 0.5em 1.5em;
+}
+.text-side > * {
+  flex-grow: 1;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 5%;
+  padding: 0;
+  margin: 0;
+}
+li {
+  gap: 0.4em;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+h1 {
+  align-self: center;
+  max-height: fit-content;
+  padding: 0;
+  margin: 0;
+}
+.check-icon {
+  justify-self: flex-start;
+  width: 5%;
+  height: 40%;
+}
+p {
+  margin: 0;
+  max-height: fit-content;
+}
+button {
+  width: 100%;
+
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  box-shadow: 2px 2px 2px hsla(5, 9%, 27%, 0.695);
+}
+
+input {
+  width: 98%;
+  height: 25%;
+  border-radius: 6px;
+}
+.form {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}

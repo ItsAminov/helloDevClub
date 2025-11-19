@@ -1,0 +1,60 @@
+@media screen and (min-width: 800px) {
+  article {
+    width: 300px;
+    height: 340px;
+    padding: 2.5em;
+  }
+  button {
+    max-height: 20%;
+  }
+}
+@media screen and (max-width: 799px) {
+  article {
+    width: 70vw;
+    flex-direction: column-reverse;
+    height: 100%;
+    padding: 1.5em;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  button {
+    margin-top: 40vh;
+    max-height: 7%;
+  }
+}
+
+article > * {
+  flex: 1;
+}
+article {
+  gap: 2em;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255);
+  margin-top: 4rem;
+  max-height: fit-content;
+}
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+}
+img {
+  width: 15%;
+  max-height: fit-content;
+}
+h1 {
+  margin: 0;
+  max-height: fit-content;
+  font-size: 45px;
+}
+p {
+  max-height: fit-content;
+  margin: 0;
+}

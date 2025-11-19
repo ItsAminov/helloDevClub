@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="constants.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="success-styles.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main>
+      <article class="s-container">
+        <img class="check-icon" src="./assets/images/icon-list.svg" />
+        <h1>thanks for subscribing!</h1>
+        <p id="article-text"></p>
+        <button id="return-button">dismiss msg</button>
+      </article>
+    </main>
+
+    <footer>all rights belong to aminov.inc®</footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get(AppConstants.EMAIL_PARAM_KEY);
+        const paragraph = document.getElementById("article-text");
+
+        paragraph.innerHTML = `A confirmation email has been sent to <strong>${email}</strong>. Please open it and click the button inside to confirm your subscription.`;
+      });
+
+      const dismissButton = document.getElementById("return-button");
+      dismissButton.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
